@@ -10,7 +10,7 @@ class MyHttpHandler(http.server.BaseHTTPRequestHandler):
 			if command == 'command':
 				print('heart')
 				SendMessage(self, 'true')
-				result = runExe(parametersDict['shell'])
+				result = RunExe(parametersDict['shell'])
 
 def SendMessage(requestInstance, message):
 	r_str=message  
