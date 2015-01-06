@@ -18,9 +18,9 @@ def Heart():
 		sysInfoDict = SystemInfo.SystemDetail()
 		params = urllib.parse.urlencode(sysInfoDict)
 		url = 'http://' + IPAdress + ':' + str(Port) + "/heart?%s" %params + "&magicnumber=" + magicNumber
-		print(url)
+		#print(url)
 		f = urllib.request.urlopen(url)
-		print(f.read().decode('utf-8'))
+		#print(f.read().decode('utf-8'))
 		time.sleep(Interval)
 
 
