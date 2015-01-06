@@ -1,6 +1,8 @@
 import time
 import _thread
 
+import Connection
+
 def timer(no, interval):
 	print("timer")
 	cnt = 0
@@ -15,7 +17,12 @@ def test():
 	_thread.start_new_thread(timer, (2, 2))
 	return
 
+def MultiThread():
+	for i in range(5000):
+		time.sleep(1)
+		_thread.start_new_thread(Connection.Heart, ())
+
 if __name__ == '__main__':
 	print("thread")
-	test()
+	MultiThread()
 	a = input("wating")
