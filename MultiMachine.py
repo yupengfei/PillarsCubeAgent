@@ -18,8 +18,8 @@ def test():
 	return
 
 def MultiThread():
-	for i in range(1000):
-		time.sleep(0.01)
+	for i in range(5000):
+		time.sleep(0.2)
 		_thread.start_new_thread(Connection.Heart, ())
 
 if __name__ == '__main__':
